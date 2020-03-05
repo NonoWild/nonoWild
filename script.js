@@ -4,8 +4,8 @@ fetch("./patronus.json")
   })
   .then(function(data) {
     let hint = data.sparrow.clue[0]
-    let square = document.getElementById("square")
-      square.innerHTML = hint
+    let p40 = document.getElementById("40")
+      p40.innerHTML = hint
     
     
 
