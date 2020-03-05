@@ -1,13 +1,50 @@
-.papa{
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pista-horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid transparent;
+}
+
+.pistaV{
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.pistaH{
+    width: 30px;
+    height: 30px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    
+    border-right: 1px solid black;
+}
+
+
+.contenedor{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: max-content;
+    height: 100vh;
 }
-
+.vacio{
+    width: 30px;
+    height: 30px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
 .grid-container{
-    border: 5px solid black;
+    
     display: inline-block;
+    height: max-content;
 }
 
 .row-container{
@@ -18,4 +55,11 @@
     width: 30px;
     height: 30px;
     border: 1px solid black;
+}
+
+.lado-derecho{
+    border-right: 1.5px solid black;
+}
+.lado-bajo{
+    border-bottom: 1.5px solid black;
 }
