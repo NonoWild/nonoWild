@@ -3,11 +3,17 @@ fetch("./patronus.json")
     return response.json();
   })
   .then(function(data) {
-    let hint = data.sparrow.clue[0]
-    let p40 = document.getElementById("40")
-      p40.innerHTML = hint
     
+    for(let i =0; i < data.sparrow.clue.length; i++){
+      document.getElementById(i).innerHTML = data.sparrow.clue[i]
+    }
     
+
+
+
+
+
+
 
   });
 
