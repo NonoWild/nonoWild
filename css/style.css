@@ -1,0 +1,21 @@
+.papa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+.grid-container{
+    border: 5px solid black;
+    display: inline-block;
+}
+
+.row-container{
+    display: flex;
+}
+
+.square{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
