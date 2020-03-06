@@ -47,7 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 92vh;
 }
 .vacio{
     width: 18vw;
@@ -99,4 +99,16 @@
     color: rgb(255, 255, 255);
     background-color: rgb(86, 93, 148);
     border-color:rgb(86, 93, 148)
+}
+
+.btn-primary:hover {
+    color: rgb(255, 255, 255);
+    background-color:rgb(48, 66, 230);
+    border-color:rgb(48, 66, 230)
+}
+
+.btn-primary:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 66, 230);
+    border-color:rgb(48, 66, 230)
 }
