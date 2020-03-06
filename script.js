@@ -1,10 +1,5 @@
-var steps = [
-  [0,0,0,0,0],
-  [0,0,0,0,0],
-  [0,0,0,0,0],
-  [0,0,0,0,0],
-  [0,0,0,0,0]
-]
+
+
 
 
 
@@ -13,15 +8,39 @@ fetch("./patronus.json")
     return response.json();
   })
   .then(function(data){
+    showGame(data)
+  });
+
+  $("#new-button").click(function() {
+    fetch("./patronus.json")
+    .then((response)=>{
+      return response.json();
+    })
+    .then((data)=>{
+
+      showGame(data)
+
+      $(".square").css("background-color", "rgb(86, 93, 148")
+    })
+  })
+
+
+  function showGame(data){
+    var steps = [
+      [0,0,0,0,0],
+      [0,0,0,0,0],
+      [0,0,0,0,0],
+      [0,0,0,0,0],
+      [0,0,0,0,0]
+    ]
+
     let a = (Object.keys(data));
 
     let picRandom = Math.floor(Math.random (a)*9);
 
     let b = a[picRandom]
-
-    console.log(Object.keys(data))
-    console.log(picRandom)
-    console.log(b)
+    console.log(b);
+  
     // PISTAS
     for(let i =0; i < data[b].clue.length; i++){
 
@@ -96,16 +115,12 @@ fetch("./patronus.json")
       let patroncl = data[b].color;
       console.log(patroncl.length);
       for(let i=0; i < patroncl.length; i++){
-        for(let j=0; j < patronc[i].length; j++){
+        for(let j=0; j < patroncl[i].length; j++){
           let temporalId = "#" + String(i) + String(j);
-          $(temporalId).css("background-color", sparrowcl[i][j]);
+          $(temporalId).css("background-color", patroncl[i][j]);
         }
       }
       
     }  
-    $("#new-button").click(function() {
-      
-    }
-  });
-
-  
+    
+  }
