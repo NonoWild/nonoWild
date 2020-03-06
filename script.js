@@ -31,7 +31,7 @@ fetch("./patronus.json")
             valor = 0;
           }
           //SI ES DISTINTO QUE EL ORIGNAL NO HAS GANADO TODAVÍA
-          if(valor !== data.sparrow.bn[i][j]){
+          if(valor !== data.skull.bn[i][j]){
             return false;
           }
         }
@@ -43,7 +43,7 @@ fetch("./patronus.json")
 
     $('.square').click(function(){
       let id = $(this).attr("id");
-      let sparrowbn = data.sparrow.bn;
+      let skullbn = data.skull.bn;
       
       //PASO 1
       //HAS HECHO CLICK ALGUNA VEZ
@@ -77,12 +77,11 @@ fetch("./patronus.json")
     });
 
     function colorize(){
-      let sparrowcl = data.sparrow.color;
-      console.log(sparrowcl.length);
-      for(let i=0; i < sparrowcl.length; i++){
-        for(let j=0; j < sparrowcl[i].length; j++){
+      let skullwcl = data.skull.color;
+      for(let i=0; i < skullwcl.length; i++){
+        for(let j=0; j < skullwcl[i].length; j++){
           let temporalId = "#" + String(i) + String(j);
-          $(temporalId).css("background-color", sparrowcl[i][j]);
+          $(temporalId).css("background-color", skullwcl[i][j]);
         }
       }
     }
