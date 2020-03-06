@@ -66,7 +66,7 @@ fetch("./patronus.json")
       }else if(steps[id[0]] [id[1]] === 2){
         $(this).css("background-color", "red");
       }else{
-        $(this).css("background-color", "white");
+        $(this).css("background-color", "#565d94")
       }
 
 
