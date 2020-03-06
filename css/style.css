@@ -1,3 +1,6 @@
+.contenedor {
+    background-color: #0C1348;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -11,20 +14,32 @@
 }
 
 .pistaV{
-    width: 12vw;
+    display: flex;
+    width: 18vw;
     height: 12vw;
     border: 1px solid transparent;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    background-color: rgb(236, 236, 236);
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    letter-spacing: 1rem;
 }
 .pistaH{
+    display: flex;
     width: 12vw;
-    height: 12vw;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    
-    border-right: 1px solid black;
+    height: 18vw;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+    background-color: rgb(236, 236, 236);
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 2rem;
 }
 
 
@@ -35,11 +50,12 @@
     height: 90vh;
 }
 .vacio{
-    width: 12vw;
-    height: 12vw;
+    width: 18vw;
+    height: 18vw;
     border-left: 1px solid transparent;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    background-color: rgb(236, 236, 236);
 }
 .grid-container{
     
@@ -54,15 +70,27 @@
 .square{
     width: 12vw;
     height: 12vw;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 .lado-derecho{
-    border-right: 2px solid black;
+    border-right: 2px solid white;
 }
 .lado-bajo{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 .modal-content{
     position: -219px;
+}
+
+.lado-derecho1 {
+    border-right: 1px solid white;
+}
+
+.lado-bajo1 {
+    border-right: 1px solid white;
+}
+
+.square {
+    background-color: rgb(86, 93, 148);
 }

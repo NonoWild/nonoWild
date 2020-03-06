@@ -4,8 +4,10 @@ fetch("./patronus.json")
   })
   .then(function(data) {
     // PISTAS
-    for(let i =0; i < data.sparrow.clue.length; i++){
-      document.getElementById(i).innerHTML = data.sparrow.clue[i]
+    for(let i =0; i < data.skull.clue.length; i++){
+
+      
+      document.getElementById(i).innerHTML = data.skull.clue[i].join("")
     }
 
     $('.square').click(function(){
@@ -15,7 +17,7 @@ fetch("./patronus.json")
       console.log(id[1])
       
       if(sparrowbn[id[0]][id[1]]=== 0){
-       $(this).css("background-color", "red");
+       $(this).css("background-color", "white");
       }else{
         $(this).css("background-color", "black");
       }
