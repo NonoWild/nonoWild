@@ -1,3 +1,4 @@
+
 .contenedor {
     background-color: #0C1348;
 }
@@ -16,7 +17,6 @@
 .pistaV{
     display: flex;
     width: 18vw;
-    height: 12vw;
     border: 1px solid transparent;
     border-top: 1px solid transparent;
     border-right: 1px solid transparent;
@@ -30,7 +30,6 @@
 .pistaH{
     display: flex;
     width: 12vw;
-    height: 18vw;
     border-left: 1px solid transparent;
     border-bottom: 1px solid transparent;
     border-right: 1px solid transparent;
@@ -61,16 +60,20 @@
     
     display: inline-block;
     height: max-content;
+    max-width: 300px;
 }
 
 .row-container{
     display: flex;
+    max-height: 50px;
 }
 
 .square{
     width: 12vw;
     height: 12vw;
     border: 1px solid white;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .lado-derecho{
