@@ -63,6 +63,12 @@
     display: flex;
     max-height: 50px;
 }
+
+.fa-share-alt-square {
+    font-size: 28px;
+    color:#19076f;
+}
+
 .square{
     width: 12vw;
     height: 12vw;
