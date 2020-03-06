@@ -1,37 +1,40 @@
-var steps = [
-  [0,0,0,0,0],
-  [0,0,0,0,0],
-  [0,0,0,0,0],
-  [0,0,0,0,0],
-  [0,0,0,0,0]
-]
-
-
-
 fetch("./patronus.json")
   .then(function(response) {
     return response.json();
   })
-
   .then(function(data){
-
-      let a = (Object.keys(data));
-
-   
-      let picRandom = Math.floor(Math.random (a)*9);
-
-      let b = a[picRandom];
-      console.log(b);
+    showGame(data)
+  });
+  $("#new-button").click(function() {
+    fetch("./patronus.json")
+    .then((response)=>{
+      return response.json();
+    })
+    .then((data)=>{
+      showGame(data)
+      $(".square").css("background-color", "rgb(86, 93, 148")
+    })
+  })
+  function showGame(data){
+    var steps = [
+      [0,0,0,0,0],
+      [0,0,0,0,0],
+      [0,0,0,0,0],
+      [0,0,0,0,0],
+      [0,0,0,0,0]
+    ]
+    let a = (Object.keys(data));
+    let picRandom = Math.floor(Math.random (a)*9);
+    let b = a[picRandom]
+    console.log(b);
+  
+    // PISTAS
+    for(let i =0; i < data[b].clue.length; i++){
       
-      // PISTAS
-      for(let i =0; i < data[b].clue.length; i++){
-
-        
-        document.getElementById(i).innerHTML = data[b].clue[i].join("")
-      }
+      document.getElementById(i).innerHTML = data[b].clue[i].join("")
+    }
     
     let comprobar = (()=>{
-
       //RECORREMOS TODO EL ARRAY
       for(i=0; i < steps.length; i++){
         for(j=0; j < steps[i].length; j++){
@@ -48,12 +51,10 @@ fetch("./patronus.json")
       }
       return true;
     })
-
     
-
     $('.square').click(function(){
       let id = $(this).attr("id");
-      let sparrowbn = data[b].bn;
+      //let sparrowbn = data[b].bn;
       
       //PASO 1
       //HAS HECHO CLICK ALGUNA VEZ
@@ -61,16 +62,11 @@ fetch("./patronus.json")
         
         steps[id[0]] [id[1]] = 1;
         
-
       }else if(steps[id[0]] [id[1]] === 1) {
         steps[id[0]] [id[1]] = 2;
       }else{
         steps[id[0]] [id[1]] = 0;
       }
-
-
-
-
       if(steps[id[0]] [id[1]] === 1){
         $(this).css("background-color", "black");
       }else if(steps[id[0]] [id[1]] === 2){
@@ -78,8 +74,6 @@ fetch("./patronus.json")
       }else{
         $(this).css("background-color", "rgb(86, 93, 148)");
       }
-
-
       if(comprobar() === true){
         colorize();
         setTimeout(()=>{
@@ -90,9 +84,7 @@ fetch("./patronus.json")
           confetti.stop()
         }, 3000)
       }
-
     });
-
     function colorize(){
       let patroncl = data[b].color;
       console.log(patroncl.length);
@@ -104,9 +96,8 @@ fetch("./patronus.json")
       }
       
     }  
-    $("#new-button").click(function() {
-      
-    }
-  });
+    
+  }
 
-  
+
+

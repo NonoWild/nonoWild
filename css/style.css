@@ -118,8 +118,32 @@
     border-color:rgb(48, 66, 230)
 }
 
-btn-secondary {
-    color: #fff;
-    background-color: rgb(86, 93, 148);; 
-     border-color: rgb(86, 93, 148);
+#new-button {
+    color: rgb(255, 255, 255);
+    background-color:rgb(86, 93, 148);
+    border-color:rgb(86, 93, 148);
+    display: inline-block;
+    font-weight: 400;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#new-button:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 66, 230);
+    border-color:rgb(48, 66, 230)
+}
+#new-button:hover {
+    color: rgb(255, 255, 255);
+    background-color:rgb(48, 66, 230);
+    border-color:rgb(48, 66, 230)
 }
