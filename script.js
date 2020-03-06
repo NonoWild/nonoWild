@@ -1,4 +1,4 @@
-let steps = [
+var steps = [
   [0,0,0,0,0],
   [0,0,0,0,0],
   [0,0,0,0,0],
@@ -7,11 +7,12 @@ let steps = [
 ]
 
 
+
 fetch("./patronus.json")
   .then(function(response) {
     return response.json();
   })
-  .then(function(data) {
+  .then(function(data){
     // PISTAS
     for(let i =0; i < data.skull.clue.length; i++){
 
@@ -25,54 +26,67 @@ fetch("./patronus.json")
       for(i=0; i < steps.length; i++){
         for(j=0; j < steps[i].length; j++){
           //AJUSTAMOS EL VALOR DE STEPS
-          let valor = steps[i][j]
+          let valor = steps[i][j];
           if(valor === 2){
-            valor = 0
+            valor = 0;
           }
           //SI ES DISTINTO QUE EL ORIGNAL NO HAS GANADO TODAVÍA
-          if(valor !== data.sparrow.bn[i][j]){
-            return false
+          if(valor !== data.skull.bn[i][j]){
+            return false;
           }
         }
       }
-      return true
+      return true;
     })
 
+    
 
     $('.square').click(function(){
-      let id = $(this).attr("id") 
-      let sparrowbn = data.sparrow.bn
+      let id = $(this).attr("id");
+      let skullbn = data.skull.bn;
       
       //PASO 1
       //HAS HECHO CLICK ALGUNA VEZ
       if(steps[id[0]] [id[1]] === 0){
         
-        steps[id[0]] [id[1]] = 1
+        steps[id[0]] [id[1]] = 1;
         
 
       }else if(steps[id[0]] [id[1]] === 1) {
-        steps[id[0]] [id[1]] = 2
+        steps[id[0]] [id[1]] = 2;
       }else{
-        steps[id[0]] [id[1]] = 0
+        steps[id[0]] [id[1]] = 0;
       }
 
 
 
 
       if(steps[id[0]] [id[1]] === 1){
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "black");
       }else if(steps[id[0]] [id[1]] === 2){
-        $(this).css("background-color", "red")
+        $(this).css("background-color", "red");
       }else{
         $(this).css("background-color", "#565d94")
       }
 
 
       if(comprobar() === true){
-        alert("¡Enhorabuena has ganado!")
+        colorize();
       }
 
-    })
+    });
+
+    function colorize(){
+      let skullwcl = data.skull.color;
+      for(let i=0; i < skullwcl.length; i++){
+        for(let j=0; j < skullwcl[i].length; j++){
+          let temporalId = "#" + String(i) + String(j);
+          $(temporalId).css("background-color", skullwcl[i][j]);
+        }
+      }
+    }
+
+    
     
   });
 
