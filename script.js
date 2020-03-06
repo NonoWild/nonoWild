@@ -14,10 +14,10 @@ fetch("./patronus.json")
   })
   .then(function(data){
     // PISTAS
-    for(let i =0; i < data.skull.clue.length; i++){
+    for(let i =0; i < data.ribbon.clue.length; i++){
 
       
-      document.getElementById(i).innerHTML = data.skull.clue[i].join("")
+      document.getElementById(i).innerHTML = data.ribbon.clue[i].join("")
     }
     
     let comprobar = (()=>{
