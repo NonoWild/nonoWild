@@ -11,10 +11,13 @@ fetch("./patronus.json")
     $('.square').click(function(){
       let id = $(this).attr("id") 
       let sparrowbn = data.sparrow.bn
-
+      console.log(id[0]);
+      console.log(id[1])
       
-      if(sparrowbn[0][0] === 0){
-        console.log("esto va de blanco")
+      if(sparrowbn[id[0]][id[1]]=== 0){
+       $(this).css("background-color", "red");
+      }else{
+        $(this).css("background-color", "black");
       }
 
     })
