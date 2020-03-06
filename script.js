@@ -12,22 +12,23 @@ fetch("./patronus.json")
   .then(function(response) {
     return response.json();
   })
+
   .then(function(data){
-    let a = (Object.keys(data));
 
-    let picRandom = Math.floor(Math.random (a)*9);
+      let a = (Object.keys(data));
 
-    let b = a[picRandom]
+   
+      let picRandom = Math.floor(Math.random (a)*9);
 
-    console.log(Object.keys(data))
-    console.log(picRandom)
-    console.log(b)
-    // PISTAS
-    for(let i =0; i < data[b].clue.length; i++){
-
+      let b = a[picRandom];
+      console.log(b);
       
-      document.getElementById(i).innerHTML = data[b].clue[i].join("")
-    }
+      // PISTAS
+      for(let i =0; i < data[b].clue.length; i++){
+
+        
+        document.getElementById(i).innerHTML = data[b].clue[i].join("")
+      }
     
     let comprobar = (()=>{
 
@@ -52,7 +53,7 @@ fetch("./patronus.json")
 
     $('.square').click(function(){
       let id = $(this).attr("id");
-      //let sparrowbn = data[b].bn;
+      let sparrowbn = data[b].bn;
       
       //PASO 1
       //HAS HECHO CLICK ALGUNA VEZ
@@ -96,9 +97,9 @@ fetch("./patronus.json")
       let patroncl = data[b].color;
       console.log(patroncl.length);
       for(let i=0; i < patroncl.length; i++){
-        for(let j=0; j < patronc[i].length; j++){
+        for(let j=0; j < patroncl[i].length; j++){
           let temporalId = "#" + String(i) + String(j);
-          $(temporalId).css("background-color", sparrowcl[i][j]);
+          $(temporalId).css("background-color", patroncl[i][j]);
         }
       }
       

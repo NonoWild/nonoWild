@@ -58,7 +58,7 @@
 
                 ],
                 "clue":[
-                    [1,1],[1,1],[4],[2,1],[2],[4],[2],[3],[3],[1]
+                    [1,1],[1,1],[5],[2,1],[2],[5],[2],[3],[3],[1]
                 ]
             },
 
@@ -136,8 +136,8 @@
                     ["#FFFFFF","#ffdc39","#000000","#ffdc39","#FFFFFF","#FFFFFF"],
                     ["#ffdc39","#ffdc39","#ffdc39","#ffdc39","#FFFFFF","#FFFFFF"],
                     ["#ffdc39","#ffdc39","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF"],
-                    ["#ffdc39","#ffdc39","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF"],
-                    ["#FFFFFF","#ffdc39","#ffdc39","#ffdc39","#FFFFFF","#FFFFFF"]
+                    ["#FFFFFF","#ffdc39","#ffdc39","#ffdc39","#FFFFFF","#FFFFFF"],
+                    ["#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF","#FFFFFF"]
                 ],
                 "clue":[
                     [0],[3],[2],[4],[3],[2],[4],[2,1],[2,1],[0]
