@@ -96,7 +96,7 @@
 }
 
 .btn-primary {
-    color: rgb(86, 93, 148);
-    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+    background-color: rgb(86, 93, 148);
     border-color:rgb(86, 93, 148)
 }
