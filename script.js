@@ -77,7 +77,7 @@ fetch("./patronus.json")
       if(comprobar() === true){
         colorize();
         setTimeout(()=>{
-          alert("¡Enhorabuena, lo has logrado!")
+          $("#finalpartida").click()
         }, 100)
         confetti.start()
         setTimeout(()=>{
