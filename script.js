@@ -84,6 +84,7 @@ fetch("./patronus.json")
           $(temporalId).css("background-color", skullwcl[i][j]);
         }
       }
+      alert("!Enhorabuena has ganado!")
     }
 
     
