@@ -103,6 +103,9 @@ fetch("./patronus.json")
       }
       
     }  
+    $("#new-button").click(function() {
+      
+    }
   });
 
   
