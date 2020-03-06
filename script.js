@@ -13,11 +13,12 @@ fetch("./patronus.json")
     return response.json();
   })
   .then(function(data){
+
     // PISTAS
-    for(let i =0; i < data.ribbon.clue.length; i++){
+    for(let i =0; i < data.skull.clue.length; i++){
 
       
-      document.getElementById(i).innerHTML = data.ribbon.clue[i].join("")
+      document.getElementById(i).innerHTML = data.skull.clue[i].join("")
     }
     
     let comprobar = (()=>{
@@ -78,7 +79,7 @@ fetch("./patronus.json")
         confetti.start()
         setTimeout(()=>{
           confetti.stop()
-        }, 3000)
+        }, 6000)
       }
 
     });
@@ -92,7 +93,6 @@ fetch("./patronus.json")
           $(temporalId).css("background-color", sparrowcl[i][j]);
         }
       }
-      alert("¡Enhorabuena has ganado!")
     }
 
     
