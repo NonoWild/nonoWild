@@ -13,11 +13,20 @@ fetch("./patronus.json")
     return response.json();
   })
   .then(function(data){
+    let a = (Object.keys(data));
+
+    let picRandom = Math.floor(Math.random (a)*9);
+
+    let b = a[picRandom]
+
+    console.log(Object.keys(data))
+    console.log(picRandom)
+    console.log(b)
     // PISTAS
-    for(let i =0; i < data.skull.clue.length; i++){
+    for(let i =0; i < data[b].clue.length; i++){
 
       
-      document.getElementById(i).innerHTML = data.skull.clue[i].join("")
+      document.getElementById(i).innerHTML = data[b].clue[i].join("")
     }
     
     let comprobar = (()=>{
@@ -31,7 +40,7 @@ fetch("./patronus.json")
             valor = 0;
           }
           //SI ES DISTINTO QUE EL ORIGNAL NO HAS GANADO TODAVÍA
-          if(valor !== data.skull.bn[i][j]){
+          if(valor !== data[b].bn[i][j]){
             return false;
           }
         }
@@ -43,7 +52,7 @@ fetch("./patronus.json")
 
     $('.square').click(function(){
       let id = $(this).attr("id");
-      let sparrowbn = data.skull.bn;
+      //let sparrowbn = data[b].bn;
       
       //PASO 1
       //HAS HECHO CLICK ALGUNA VEZ
@@ -84,10 +93,10 @@ fetch("./patronus.json")
     });
 
     function colorize(){
-      let sparrowcl = data.skull.color;
-      console.log(sparrowcl.length);
-      for(let i=0; i < sparrowcl.length; i++){
-        for(let j=0; j < sparrowcl[i].length; j++){
+      let patroncl = data[b].color;
+      console.log(patroncl.length);
+      for(let i=0; i < patroncl.length; i++){
+        for(let j=0; j < patronc[i].length; j++){
           let temporalId = "#" + String(i) + String(j);
           $(temporalId).css("background-color", sparrowcl[i][j]);
         }
