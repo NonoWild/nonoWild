@@ -79,6 +79,13 @@
 .modal-content{
     position: -219px;
 }
+.modal-footer{
+    justify-content: space-between;
+}
+
+.fa-share-alt-square{
+    font-size: 20px;
+}
 .lado-derecho1 {
     border-right: 1px solid white;
 }
