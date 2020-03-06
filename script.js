@@ -7,6 +7,7 @@ var steps = [
 ]
 
 
+
 fetch("./patronus.json")
   .then(function(response) {
     return response.json();
@@ -36,6 +37,7 @@ fetch("./patronus.json")
       return true;
     })
 
+    
 
     $('.square').click(function(){
       let id = $(this).attr("id");
@@ -67,10 +69,23 @@ fetch("./patronus.json")
 
 
       if(comprobar() === true){
-        alert("¡Enhorabuena has ganado!");
+        colorize();
       }
 
     });
+
+    function colorize(){
+      let sparrowcl = data.sparrow.color;
+      console.log(sparrowcl.length);
+      for(let i=0; i < sparrowcl.length; i++){
+        for(let j=0; j < sparrowcl[i].length; j++){
+          let temporalId = "#" + String(i) + String(j);
+          $(temporalId).css("background-color", sparrowcl[i][j]);
+        }
+      }
+    }
+
+    
     
   });
 
