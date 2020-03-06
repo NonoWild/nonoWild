@@ -74,9 +74,9 @@ fetch("./patronus.json")
       if(steps[id[0]] [id[1]] === 1){
         $(this).css("background-color", "black");
       }else if(steps[id[0]] [id[1]] === 2){
-        $(this).css("background-color", "red");
+        $(this).css("background-color", "#46b967");
       }else{
-        $(this).css("background-color", "white");
+        $(this).css("background-color", "rgb(86, 93, 148)");
       }
 
 
@@ -104,6 +104,9 @@ fetch("./patronus.json")
       }
       
     }  
+    $("#new-button").click(function() {
+      
+    }
   });
 
   
