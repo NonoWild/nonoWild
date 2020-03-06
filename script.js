@@ -93,10 +93,7 @@ fetch("./patronus.json")
         }
       }
       
-    }
-
-    
-    
+    }  
   });
 
   
