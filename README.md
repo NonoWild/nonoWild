@@ -1,1 +1,2 @@
 # nonoWild
+Juego de nonogramas
